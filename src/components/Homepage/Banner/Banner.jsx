@@ -1,28 +1,23 @@
 import React from "react";
-import styles from "./Banner.module.css";
 import Image from "next/image";
 import arrow from "../assets/banner/arrow up.png";
-import { Manrope } from "next/font/google";
+// import { Manrope } from "next/font/google";
 import Motive from "./Motive";
-const manrope = Manrope({
-  weight: ["700", "400"], // Choose specific font weights
-  subsets: ["latin"], // Use the desired subsets
-});
+import { manrope } from "@/utils/font";
+
 export default function Banner() {
   return (
-    <section>
-      <div
-        className={`h-[70vh] w-[100%] ${styles.backgroundImage} flex justify-center items-center`}
-      >
+    <section className="m-0">
+      <div className="h-[350px] sm:h-[70vh] w-[100%] bg-hero bg-cover bg-no-repeat flex justify-center items-center bg-center">
         {/* hero text */}
         <div className="text text-center">
           <h1
-            className={`text-[48px] text-white ${manrope.className} font-bold`}
+            className={`text-[23px] sm:text-[48px] text-white ${manrope.className} font-bold`}
           >
             Elevate Your Everyday Style
           </h1>
           <p
-            className={`text-[19px] text-[#F5F3FF] ${manrope.className} font-normal`}
+            className={`text-[13px] sm:text-[19px] text-[#F5F3FF] ${manrope.className} font-normal`}
           >
             Discover the Latest Trends in Sustainable Fashion
           </p>
