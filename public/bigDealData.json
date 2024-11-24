@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Indian Sharee",
+    "price": "2,300",
+    "image": "/images/d1.png",
+    "height": 252,
+    "width": 379
+  },
+  {
+    "id": 2,
+    "name": "Half sleeve shirt",
+    "price": "2,300",
+    "image": "/images/d2.png",
+    "height": 286,
+    "width": 320
+  },
+  {
+    "id": 3,
+    "name": "Woman waring sari",
+    "price": "2,300",
+    "image": "/images/d3.png",
+    "height": 202,
+    "width": 303
+  },
+  {
+    "id": 4,
+    "name": "Checkered Shirt",
+    "price": "2,300",
+    "image": "/images/d4.png",
+    "height": 394,
+    "width": 594
+  }
+]

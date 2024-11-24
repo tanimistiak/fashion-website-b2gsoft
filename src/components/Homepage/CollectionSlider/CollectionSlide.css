@@ -1,0 +1,19 @@
+.collection-slider .swiper-pagination-bullets {
+  /* display: none !important; */
+  /* visibility: hidden; */
+  /* margin-top: 500px !important; */
+  bottom: 78px !important;
+}
+
+.collection-slider .swiper-pagination-bullet-active {
+  width: 32px !important;
+  height: 8px !important;
+  border-radius: 8px !important;
+  background-color: #7e53d4 !important;
+}
+.collection-slider .swiper-pagination-bullet {
+  width: 16px;
+  height: 8px;
+  border-radius: 8px;
+  background-color: #e0dcf8;
+}
