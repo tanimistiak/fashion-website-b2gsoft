@@ -7,13 +7,13 @@ import BigDeal from "./BigDeal/BigDeal";
 
 export default function LandingPage() {
   return (
-    <>
+    <section className="bg-[#F4F8FF] pb-20">
       {/* banner */}
       <Banner />
       <FeaturedProducts />
       <Offer />
       <CollectionSlider />
       <BigDeal />
-    </>
+    </section>
   );
 }

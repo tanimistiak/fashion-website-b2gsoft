@@ -2,33 +2,17 @@ import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import "swiper/css"; // Import Swiper styles
 import { useRef, useState } from "react";
 import Image from "next/image";
-import { manrope } from "@/utils/font";
+import { manrope, nunito } from "@/utils/font";
 import { ArrowLeft02Icon, ArrowRight02Icon } from "hugeicons-react";
 
 import SwiperNavigation from "../SwiperNavigation/SwiperNavigation";
 import AddToCartButton from "../AddToCartButton/AddToCartButton";
-export default function ProductSlider({ data }) {
-  const [swiperInstance, setSwiperInstance] = useState(null);
-
+export default function ProductSliderWithRating({ data, setSwiperInstance, swiperInstance }) {
+  
+  const rating = [1, 2, 3];
+  const noRating = [1, 2];
   return (
-    <div className="w-[90%] mx-auto mt-14">
-      {/* heading and controls */}
-      <div className="flex justify-between items-center mb-10">
-        <div className="texts">
-          <h1
-            className={`text-[#7E53D4] ${manrope.className} text-[19px] font-normal`}
-          >
-            FEATURED PRODUCT
-          </h1>
-          <h4 className={`text-[28px] ${manrope.className} font-bold`}>
-            New Arrivals
-          </h4>
-        </div>
-        {/* controls */}
-        <div>
-          <SwiperNavigation swiper={swiperInstance} />
-        </div>
-      </div>
+    <div className=" mx-auto mt-14">
       <Swiper
         spaceBetween={24} // Space between slides
         slidesPerView={"auto"}
@@ -47,7 +31,7 @@ export default function ProductSlider({ data }) {
           350: {
             slidesPerView: 1, // 1 slides for screen 350px and above
             // spaceBetween: 50,
-            spaceBetween: -20,
+            spaceBetween: -50,
           },
         }}
         // loop={true} // Enable looping of slides
@@ -64,15 +48,37 @@ export default function ProductSlider({ data }) {
               display: "flex",
               justifyContent: "none",
             }}
-            className="hover:cursor-pointer bg-[#F4F8FF]"
+            className="hover:cursor-pointer"
           >
             <div className="w-[286px] h-[400px]">
               {/* image */}
-              <div className="image w-[286px] h-[287px] overflow-hidden relative bg-[F6F5FD] rounded-[8px]">
-                <Image src={item?.image} objectFit="cover" layout="fill" />
+              <div className="image w-[286px] h-[287px] overflow-hidden relative bg-[#F6F5FD] rounded-[8px]">
+                <Image src={item?.image} objectFit="contain" layout="fill" />
+              </div>
+              {/* rating */}
+              <div className="rating flex items-center gap-[4px]">
+                {rating?.map((rate, index) => (
+                  <Image
+                    key={index}
+                    src="/images/starf.png"
+                    width={13.13}
+                    height={13.13}
+                    alt="rating"
+                  />
+                ))}
+                {noRating?.map((rate, index) => (
+                  <Image
+                    key={index}
+                    src="/images/star.png"
+                    width={13.13}
+                    height={13.13}
+                    alt="rating"
+                  />
+                ))}
+                <span className={`${nunito.className}`}>(50)</span>
               </div>
               {/* name price */}
-              <div className="name-price flex justify-between items-center my-[16px]">
+              <div className="name-price flex justify-between items-center my-[5px]">
                 <div className={`${manrope.className} text-[16px] font-normal`}>
                   {item?.name}
                 </div>

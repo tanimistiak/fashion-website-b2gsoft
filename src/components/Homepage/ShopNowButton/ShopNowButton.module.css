@@ -1,0 +1,16 @@
+.rotate {
+  transition: all;
+  transition-duration: 500ms;
+}
+.group:hover .rotate {
+  transform: rotate(90deg);
+  background-color: #6f42c1;
+  transition: all;
+  transition-duration: 500ms;
+}
+.shop:hover {
+  background-color: #6f42c1;
+}
+.group:hover .btn {
+  background-color: #6f42c1;
+}

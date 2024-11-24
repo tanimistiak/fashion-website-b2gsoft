@@ -1,15 +1,19 @@
 "use client";
 import { useFetchData } from "@/hooks/useFetchData";
 import { manrope } from "@/utils/font";
-import React from "react";
+import React, { useState } from "react";
 import SwiperNavigation from "../SwiperNavigation/SwiperNavigation";
 import SingleProduct from "./SingleProduct";
+import SeeMoreButton from "../SeeMoreButton/SeeMoreButton";
+import ProductSliderWithRating from "./ProductSliderWithRating";
 
 export default function BigDeal() {
   const { data } = useFetchData("/bigDealData.json");
+  const [swiperInstance, setSwiperInstance] = useState(null);
+  // console.log(data);
   return (
-    <section className="w-[90%] mx-auto">
-      <div className="header justify-between flex items-center">
+    <section className="w-[90%] mx-auto ">
+      <div className="header justify-between flex items-center mb-5">
         <div className="text">
           <p
             className={`${manrope.className} text-[19px] font-normal text-[#7E53D4]`}
@@ -23,13 +27,29 @@ export default function BigDeal() {
           </h1>
         </div>
         <div className="button">
-          <SwiperNavigation />
+          <SwiperNavigation swiper={swiperInstance} />
         </div>
       </div>
-      <div className="products">
-        {data?.map((item) => (
-          <SingleProduct item={item} key={item?.id} />
-        ))}
+      {/* products */}
+      <div className="products hidden sm:flex flex-col gap-[24px]">
+        <div className="products sm:grid sm:grid-cols-4 gap-[24px]">
+          {data?.map((item) => (
+            <SingleProduct item={item} key={item?.id} />
+          ))}
+        </div>
+        <div className="products sm:grid sm:grid-cols-4 gap-[24px]">
+          {data?.map((item) => (
+            <SingleProduct item={item} key={item?.id} />
+          ))}
+        </div>
+      </div>
+      <ProductSliderWithRating
+        data={data}
+        swiperInstance={swiperInstance}
+        setSwiperInstance={setSwiperInstance}
+      />
+      <div className="see-more flex justify-center">
+        <SeeMoreButton />
       </div>
     </section>
   );
