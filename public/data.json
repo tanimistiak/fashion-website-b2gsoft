@@ -3,24 +3,40 @@
     "id": 1,
     "name": "Indian Sharee",
     "price": "2,300",
-    "image": "/images/p1.png"
+    "image": "/images/p1.png",
+    "height": 252,
+    "width": 379
   },
   {
-    "id": 1,
-    "name": "Indian Sharee",
+    "id": 2,
+    "name": "Hoodie",
     "price": "2,300",
-    "image": "/images/p1.png"
+    "image": "/images/p2.png",
+    "height": 286,
+    "width": 320
   },
   {
-    "id": 1,
-    "name": "Indian Sharee",
+    "id": 3,
+    "name": "Plazu",
     "price": "2,300",
-    "image": "/images/p1.png"
+    "image": "/images/p3.png",
+    "height": 202,
+    "width": 303
   },
   {
-    "id": 1,
-    "name": "Indian Sharee",
+    "id": 4,
+    "name": "Jacket",
     "price": "2,300",
-    "image": "/images/p1.png"
+    "image": "/images/p4.png",
+    "height": 394,
+    "width": 594
+  },
+  {
+    "id": 5,
+    "name": "Jacket",
+    "price": "2,300",
+    "image": "/images/p4.png",
+    "height": 394,
+    "width": 594
   }
 ]

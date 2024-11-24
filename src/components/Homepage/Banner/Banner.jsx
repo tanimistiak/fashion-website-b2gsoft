@@ -4,6 +4,7 @@ import arrow from "../assets/banner/arrow up.png";
 // import { Manrope } from "next/font/google";
 import Motive from "./Motive";
 import { manrope } from "@/utils/font";
+import ShopNowButton from "../ShopNowButton/ShopNowButton";
 
 export default function Banner() {
   return (
@@ -21,16 +22,7 @@ export default function Banner() {
           >
             Discover the Latest Trends in Sustainable Fashion
           </p>
-          <div className="button-group flex justify-center items-center mt-[24px]">
-            <button
-              className={`w-[149px] h-[48px] bg-[#8F71E1] rounded-[28px] ${manrope.className} text-white font-normal`}
-            >
-              Shop Now
-            </button>
-            <div className="arrow w-[48px] h-[48px] bg-[#8F71E1] rounded-[24px] flex justify-center items-center">
-              <Image src={arrow} width={24} height={24} alt="arrow" />
-            </div>
-          </div>
+          <ShopNowButton />
         </div>
       </div>
       <Motive />

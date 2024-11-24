@@ -1,0 +1,6 @@
+.sliderIconParent:hover .sliderIcon {
+  color: #f4f8ff !important;
+  transition: all;
+  /* transition-delay: 0.2s; */
+  transition-duration: 0.5s;
+}
