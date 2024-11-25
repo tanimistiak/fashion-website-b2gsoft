@@ -34,7 +34,12 @@ export default function Header() {
           <Link href="/" className={`${pathName === "/" && "text-[#581FC1]"}`}>
             Home
           </Link>
-          <Link href="/products">Shop</Link>
+          <Link
+            href="/product"
+            className={`${pathName.includes('product') && "text-[#581FC1]"}`}
+          >
+            Shop
+          </Link>
           <Link href="">Deals</Link>
           <Link href="">What&apos;s new</Link>
         </ul>

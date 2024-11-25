@@ -7,6 +7,7 @@ import { ArrowLeft02Icon, ArrowRight02Icon } from "hugeicons-react";
 
 import SwiperNavigation from "../SwiperNavigation/SwiperNavigation";
 import AddToCartButton from "../AddToCartButton/AddToCartButton";
+import Link from "next/link";
 export default function ProductSlider({ data }) {
   const [swiperInstance, setSwiperInstance] = useState(null);
 
@@ -71,25 +72,29 @@ export default function ProductSlider({ data }) {
             }}
             className="hover:cursor-pointer bg-[#F4F8FF]"
           >
-            <div className="w-[286px] h-[400px] mt-[10px] ml-[10px]">
-              {/* image */}
-              <div className="image w-[286px] h-[287px] overflow-hidden relative bg-[#F6F5FD] rounded-[8px]">
-                <Image src={item?.image} objectFit="cover" layout="fill" />
-              </div>
-              {/* name price */}
-              <div className="name-price flex justify-between items-center my-[16px]">
-                <div className={`${manrope.className} text-[16px] font-normal`}>
-                  {item?.name}
+            <Link href={`product/${item?.id}`}>
+              <div className="w-[286px] h-[400px] mt-[10px] ml-[10px]">
+                {/* image */}
+                <div className="image w-[286px] h-[287px] overflow-hidden relative bg-[#F6F5FD] rounded-[8px]">
+                  <Image src={item?.image} objectFit="cover" layout="fill" />
                 </div>
-                <div
-                  className={`${manrope.className} text-[19px] font-semibold`}
-                >
-                  BDT {item?.price}
+                {/* name price */}
+                <div className="name-price flex justify-between items-center my-[16px]">
+                  <div
+                    className={`${manrope.className} text-[16px] font-normal`}
+                  >
+                    {item?.name}
+                  </div>
+                  <div
+                    className={`${manrope.className} text-[19px] font-semibold`}
+                  >
+                    BDT {item?.price}
+                  </div>
                 </div>
+                {/* cart */}
+                <AddToCartButton />
               </div>
-              {/* cart */}
-              <AddToCartButton />
-            </div>
+            </Link>
           </SwiperSlide>
         ))}
         {/* Add more SwiperSlide components as needed */}

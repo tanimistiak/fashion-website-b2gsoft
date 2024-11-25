@@ -1,0 +1,23 @@
+.gallerySlider {
+  height: 507px;
+}
+.gallery-slider .swiper-thumbs {
+  height: 142px;
+  margin: 10px 0;
+}
+.gallery-swiper-slider {
+  display: flex;
+  justify-content: center !important;
+  background-color: #f6f5fd;
+}
+
+.gallery-slider .swiper-thumbs .swiper-slide {
+  display: flex !important;
+  justify-content: center;
+}
+.gallerySlider .swiper-button-prev::after {
+  content: "";
+}
+.gallerySlider .swiper-button-next::after {
+  content: "";
+}
