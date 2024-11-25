@@ -31,7 +31,7 @@ export default function ProductSliderWithRating({ data, setSwiperInstance, swipe
           350: {
             slidesPerView: 1, // 1 slides for screen 350px and above
             // spaceBetween: 50,
-            spaceBetween: -50,
+            spaceBetween: -20,
           },
         }}
         // loop={true} // Enable looping of slides

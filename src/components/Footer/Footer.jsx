@@ -24,7 +24,7 @@ export default function Footer() {
               </p>
             </div>
           </div>
-          <div className="news-letter w-[100%]">
+          <div className="news-letter">
             <p
               className={`${manrope.className} text-[23px] font-bold text-white`}
             >
@@ -41,7 +41,7 @@ export default function Footer() {
                 type="text"
                 name=""
                 id=""
-                className={`sm:w-[435px] w-[227px] sm:h-[53px] h-[40px] rounded-tl-[8px] rounded-bl-[8px] p-[16px] placeholder:text-[16px] placeholder:text-[#1D1D1D]`}
+                className={`sm:w-[435px] w-[220px] sm:h-[53px] h-[40px] rounded-tl-[8px] rounded-bl-[8px] p-[16px] placeholder:text-[16px] placeholder:text-[#1D1D1D]`}
                 placeholder="Your email address"
               />
               <button

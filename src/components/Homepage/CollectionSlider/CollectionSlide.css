@@ -2,7 +2,7 @@
   /* display: none !important; */
   /* visibility: hidden; */
   /* margin-top: 500px !important; */
-  bottom: 78px !important;
+  bottom: 70px !important;
 }
 
 .collection-slider .swiper-pagination-bullet-active {
@@ -16,4 +16,8 @@
   height: 8px;
   border-radius: 8px;
   background-color: #e0dcf8;
+}
+.collection-slider .swiper-slide {
+  display: flex;
+  align-items: center;
 }

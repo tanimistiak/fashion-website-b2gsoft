@@ -19,16 +19,18 @@ export default function CollectionSlider() {
       <Swiper
         slidesPerView={1}
         modules={[Pagination]}
-        className="mySwiper w-[90%] mx-auto collection-slider sm:h-[614px] overflow-visible"
+        className="mySwiper w-[90%] mx-auto collection-slider h-[700px]"
         pagination={true}
       >
         {/* First slide */}
-        <SwiperSlide>
-          <div className="flex items-center w-full gap-5">
-            <div className="sm:h-[481px] bg-[#EEECFB] sm:w-[50%] overflow-visible relative">
+        <SwiperSlide className="">
+          <div className="flex items-center w-full gap-5 h-[90%]">
+            <div className="h-[481px] bg-[#EEECFB] w-[50%]  flex justify-center relative">
               <img
                 src="/images/s3.png"
-                className="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-[566px] w-[468px]"
+                height={566}
+                width={468}
+                className="absolute bottom-0"
               />
             </div>
             {/* Text-box */}
@@ -44,37 +46,43 @@ export default function CollectionSlider() {
         </SwiperSlide>
         {/* Second slide */}
         <SwiperSlide>
-          <div className="flex items-center w-full gap-5">
-            <div className="sm:h-[481px] bg-[#EEECFB] sm:w-[50%] overflow-visible relative">
+          <div className="flex items-center w-full gap-5 h-[90%] flex-row-reverse">
+            <div className="h-[481px] bg-[#EEECFB] w-[50%]  flex justify-center relative">
               <img
                 src="/images/s2.png"
-                className="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-[566px] w-[468px]"
+                height={567}
+                width={341}
+                className="absolute bottom-0"
               />
             </div>
             {/* Text-box */}
-            <div className={`sm:w-[50%]`}>
-              <p className={`${manrope.className} text-[48px] font-semibold`}>
-                MEN COLLECTION
-              </p>
-              <div className="flex justify-start">
-                <ShopNowButton />
+            <div className={`sm:w-[50%] flex justify-end`}>
+              <div>
+                <p className={`${manrope.className} text-[48px] font-semibold`}>
+                  WOMEN COLLECTION
+                </p>
+                <div className="flex justify-start">
+                  <ShopNowButton />
+                </div>
               </div>
             </div>
           </div>
         </SwiperSlide>
         {/* Third slide */}
         <SwiperSlide>
-          <div className="flex items-center w-full gap-5">
-            <div className="sm:h-[481px] bg-[#EEECFB] sm:w-[50%] overflow-visible relative">
+          <div className="flex items-center w-full gap-5 h-[90%]">
+            <div className="h-[481px] bg-[#EEECFB] w-[50%]  flex justify-center relative">
               <img
                 src="/images/s1.png"
-                className="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-[566px] w-[468px]"
+                height={606}
+                width={405}
+                className="absolute bottom-0"
               />
             </div>
             {/* Text-box */}
             <div className={`sm:w-[50%]`}>
               <p className={`${manrope.className} text-[48px] font-semibold`}>
-                MEN COLLECTION
+                KID COLLECTION
               </p>
               <div className="flex justify-start">
                 <ShopNowButton />

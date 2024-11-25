@@ -11,6 +11,7 @@ export default function BigDeal() {
   const { data } = useFetchData("/bigDealData.json");
   const [swiperInstance, setSwiperInstance] = useState(null);
   // console.log(data);
+  console.log(data);
   return (
     <section className="w-[90%] mx-auto ">
       <div className="header justify-between flex items-center mb-5">
@@ -43,11 +44,13 @@ export default function BigDeal() {
           ))}
         </div>
       </div>
-      <ProductSliderWithRating
-        data={data}
-        swiperInstance={swiperInstance}
-        setSwiperInstance={setSwiperInstance}
-      />
+      <div className="block sm:hidden">
+        <ProductSliderWithRating
+          data={data}
+          swiperInstance={swiperInstance}
+          setSwiperInstance={setSwiperInstance}
+        />
+      </div>
       <div className="see-more flex justify-center">
         <SeeMoreButton />
       </div>

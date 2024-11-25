@@ -21,7 +21,7 @@ export default function Offer() {
           <ShopNowButton />
         </div>
       </div>
-      <div className="image-block w-[427px] h-[450px] overflow-hidden relative">
+      <div className="image-block w-[100%] sm:w-[427px] h-[450px] overflow-hidden relative">
         <Image
           src="/images/offer.png"
           objectFit="cover"

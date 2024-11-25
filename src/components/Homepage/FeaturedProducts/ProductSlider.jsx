@@ -34,12 +34,15 @@ export default function ProductSlider({ data }) {
         slidesPerView={"auto"}
         onSwiper={setSwiperInstance}
         breakpoints={{
-          1024: {
+          1333: {
             slidesPerView: 4, // 4 slides for screens 1024px and above
             // spaceBetween: 24,
           },
+          958: {
+            slidesPerView: 3,
+          },
           768: {
-            slidesPerView: 3, // 3 slides for screens 768px and above
+            slidesPerView: 2, // 3 slides for screens 768px and above
           },
           480: {
             slidesPerView: 1, // 1 slides for screens 480px and above
@@ -56,6 +59,7 @@ export default function ProductSlider({ data }) {
         // centeredSlides={true}
         centeredSlidesBounds={true}
         // slidesPerView={"auto"}
+        style={{ background: "#FFFFFF" }}
       >
         {data?.map((item) => (
           <SwiperSlide
@@ -63,12 +67,13 @@ export default function ProductSlider({ data }) {
             style={{
               display: "flex",
               justifyContent: "none",
+              background: "#FFFFFF",
             }}
             className="hover:cursor-pointer bg-[#F4F8FF]"
           >
-            <div className="w-[286px] h-[400px]">
+            <div className="w-[286px] h-[400px] mt-[10px] ml-[10px]">
               {/* image */}
-              <div className="image w-[286px] h-[287px] overflow-hidden relative bg-[F6F5FD] rounded-[8px]">
+              <div className="image w-[286px] h-[287px] overflow-hidden relative bg-[#F6F5FD] rounded-[8px]">
                 <Image src={item?.image} objectFit="cover" layout="fill" />
               </div>
               {/* name price */}
