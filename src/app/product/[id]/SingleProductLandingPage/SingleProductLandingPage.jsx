@@ -1,11 +1,18 @@
 "use client";
 import { useParams } from "next/navigation";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Gallery from "./Gallery/Gallery";
 import ProductDetails from "./ProductDetails/ProductDetails";
+import { useFetchData } from "@/hooks/useFetchData";
 
 export default function SingleProductLandingPage() {
   const { id } = useParams();
+  const { data } = useFetchData("/data.json");
+  const [product, setProduct] = useState();
+  useEffect(() => {
+    const foundProduct = data?.find((item) => item.id == id);
+    setProduct(foundProduct);
+  }, [data, id]);
 
   return (
     <>
@@ -14,7 +21,7 @@ export default function SingleProductLandingPage() {
           <Gallery />
         </div>
         <div className="w-[45%]">
-          <ProductDetails />
+          <ProductDetails item={product} />
         </div>
       </div>
     </>
