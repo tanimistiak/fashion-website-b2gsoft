@@ -1,21 +1,27 @@
 "use client";
 import { useCart } from "@/context/CartContext";
 import { nunito } from "@/utils/font";
+import { Search01Icon } from "hugeicons-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React from "react";
+import React, { useState } from "react";
+import DropDown from "./DropDown";
 
 export default function Header() {
   const pathName = usePathname();
   const { cartCount } = useCart();
+  const [dropDown, setDropDown] = useState(false);
   // console.log(cartCount);
   return (
     <header className="flex justify-between px-5 sm:px-0 sm:justify-evenly items-center py-5 bg-[#F5F3FF] w-[100%]">
       {/* logo */}
       <div className="logo-image flex gap-2 items-center">
         {/* mobile menu */}
-        <div className="hamburger sm:hidden">
+        <div
+          className="hamburger md:hidden"
+          onClick={() => setDropDown(!dropDown)}
+        >
           <div className="icon">
             <Image
               src="/images/hamburger.png"
@@ -32,7 +38,7 @@ export default function Header() {
         />
       </div>
       {/* menus */}
-      <nav className="nav-menus hidden sm:block">
+      <nav className="nav-menus hidden md:block">
         <ul className="flex gap-[16px]">
           <Link href="/" className={`${pathName === "/" && "text-[#581FC1]"}`}>
             Home
@@ -51,28 +57,17 @@ export default function Header() {
       <div className="icons-group flex items-center gap-[16px]">
         {/* search bar */}
         <div className="search-bar flex items-center h-[35px]">
-          <div className="flex justify-center items-center sm:block search h-full sm:bg-[#FFFFFF] sm:px-3 sm:rounded-bl-[17px] sm:rounded-tl-[17px]">
-            <Image
-              src="/images/search.png"
-              alt="search"
-              height={16}
-              width={16}
-              className="hidden sm:mt-[50%] sm:block"
-            />
+          <div className="flex justify-center items-center md:flex search h-full md:bg-[#FFFFFF] sm:px-3 sm:rounded-bl-[17px] sm:rounded-tl-[17px]">
+            {/* for pc */}
+            <Search01Icon className="hidden md:block" size={16} />
             {/* for mobile */}
-            <Image
-              src="/images/search.png"
-              alt="search"
-              height={24}
-              width={24}
-              className="sm:hidden"
-            />
+            <Search01Icon size={24} className="md:hidden" />
           </div>
           <input
             type="text"
             name=""
             id=""
-            className="rounded-br-[17px] rounded-tr-[17px] h-full border-none outline-none hidden sm:block"
+            className="rounded-br-[17px] rounded-tr-[17px] h-full border-none outline-none hidden md:block"
           />
         </div>
         {/* cart */}
@@ -91,6 +86,7 @@ export default function Header() {
           <Image src="/images/user.png" alt="account" height={24} width={24} />
         </div>
       </div>
+      <DropDown dropDown={dropDown} />
     </header>
   );
 }
