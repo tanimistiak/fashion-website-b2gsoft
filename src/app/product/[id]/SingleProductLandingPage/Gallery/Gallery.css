@@ -21,3 +21,8 @@
 .gallerySlider .swiper-button-next::after {
   content: "";
 }
+@media only screen and (max-width: 600px) {
+  .gallerySlider {
+    height: 271.07px;
+  }
+}

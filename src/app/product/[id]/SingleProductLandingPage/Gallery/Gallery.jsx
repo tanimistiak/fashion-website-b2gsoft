@@ -59,24 +59,26 @@ export default function Gallery() {
           ))}
         </Swiper>
       </div>
-      <Swiper
-        onSwiper={setThumbsSwiper}
-        spaceBetween={10}
-        slidesPerView={4}
-        freeMode={true}
-        watchSlidesProgress={true}
-        modules={[FreeMode, Navigation, Thumbs]}
-        className="mySwiper bg-[#F6F5FD]"
-      >
-        {images?.map((image, index) => (
-          <SwiperSlide
-            key={index}
-            className="bg-[#ECE9FE] relative rounded-[16px]"
-          >
-            <img src={image} className="object-cover" />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <div className="hidden sm:block">
+        <Swiper
+          onSwiper={setThumbsSwiper}
+          spaceBetween={10}
+          slidesPerView={4}
+          freeMode={true}
+          watchSlidesProgress={true}
+          modules={[FreeMode, Navigation, Thumbs]}
+          className="mySwiper bg-[#F6F5FD]"
+        >
+          {images?.map((image, index) => (
+            <SwiperSlide
+              key={index}
+              className="bg-[#ECE9FE] relative rounded-[16px]"
+            >
+              <img src={image} className="object-cover" />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </>
   );
 }

@@ -11,7 +11,9 @@ export default function FeaturedProducts() {
   return (
     <div>
       {loading && <p>Loading...</p>}
-      <ProductSlider data={data} />
+      <div className="w-[90%] mx-auto">
+        <ProductSlider data={data} featured={true} related={false} />
+      </div>
       <div className="flex justify-center">
         <SeeMoreButton />
       </div>

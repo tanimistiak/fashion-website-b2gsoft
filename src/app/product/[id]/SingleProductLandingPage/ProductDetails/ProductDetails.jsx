@@ -3,6 +3,11 @@ import Image from "next/image";
 import React from "react";
 import Dashedborder from "./Dashedborder";
 import AvailableSize from "./AvailableSize";
+import AvailableColor from "./AvailableColor";
+import Quantity from "./Quantity";
+import AddToCartButton from "@/components/Homepage/AddToCartButton/AddToCartButton";
+import BuyNowButton from "./AddToCartButton";
+import { StarIcon } from "hugeicons-react";
 
 export default function ProductDetails({ item }) {
   const starFill = [1, 2, 3, 4];
@@ -28,26 +33,12 @@ export default function ProductDetails({ item }) {
           {/* stars */}
           <div className="flex items-center gap-1">
             {starFill?.map((item) => (
-              <div
-                key={item}
-                className="star w-[20px] h-[20px] relative flex items-center"
-              >
-                <Image
-                  key={item}
-                  src="/images/starf.png"
-                  objectFit="contain"
-                  layout="fill"
-                  alt="rating"
-                />
+              <div key={item} className="star flex">
+                <StarIcon size={20} fill="#FFCF11" color="#FFCF11" />
               </div>
             ))}
-            <div className="star w-[20px] h-[20px] relative">
-              <Image
-                src="/images/starg.png"
-                width={19}
-                height={19}
-                alt="rating"
-              />
+            <div className="star">
+              <StarIcon size={20} fill="#DFDFDF" color="#DFDFDF" />
             </div>
           </div>
           {/* review text */}
@@ -66,10 +57,24 @@ export default function ProductDetails({ item }) {
       </div>
 
       {/* dashed border */}
-      <Dashedborder />
+      <div className="my-10">
+        <Dashedborder />
+      </div>
 
-      <div>
+      <div className="flex gap-56 items-center">
         <AvailableSize />
+        <AvailableColor />
+      </div>
+      <div className="my-11">
+        <Dashedborder />
+      </div>
+      <div>
+        <Quantity />
+      </div>
+      {/* button */}
+      <div className="flex gap-5 my-5 sm:flex-row flex-col">
+        <BuyNowButton />
+        <AddToCartButton />
       </div>
     </div>
   );

@@ -4,6 +4,10 @@ import React, { useEffect, useState } from "react";
 import Gallery from "./Gallery/Gallery";
 import ProductDetails from "./ProductDetails/ProductDetails";
 import { useFetchData } from "@/hooks/useFetchData";
+import ReviewRating from "./ReviewRating/ReviewRating";
+import FeaturedProducts from "@/components/Homepage/FeaturedProducts/FeaturedProducts";
+import ProductSlider from "@/components/Homepage/FeaturedProducts/ProductSlider";
+import SeeMoreButton from "@/components/Homepage/SeeMoreButton/SeeMoreButton";
 
 export default function SingleProductLandingPage() {
   const { id } = useParams();
@@ -15,15 +19,20 @@ export default function SingleProductLandingPage() {
   }, [data, id]);
 
   return (
-    <>
-      <div className="first-section w-[90%] mx-auto flex gap-5">
-        <div className="w-[45%] gallery-slider">
+    <div className="w-[90%] mx-auto">
+      <div className="first-section flex gap-5 py-5 sm:flex-row flex-col">
+        <div className="w-[100%] sm:w-[50%] gallery-slider">
           <Gallery />
         </div>
-        <div className="w-[45%]">
+        <div className="w-[100%] sm:w-[50%]">
           <ProductDetails item={product} />
         </div>
       </div>
-    </>
+      <ReviewRating />
+      <ProductSlider data={data} featured={false} related={true} />
+      <div className="flex justify-center pb-10">
+        <SeeMoreButton />
+      </div>
+    </div>
   );
 }

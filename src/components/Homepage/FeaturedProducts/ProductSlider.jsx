@@ -8,21 +8,21 @@ import { ArrowLeft02Icon, ArrowRight02Icon } from "hugeicons-react";
 import SwiperNavigation from "../SwiperNavigation/SwiperNavigation";
 import AddToCartButton from "../AddToCartButton/AddToCartButton";
 import Link from "next/link";
-export default function ProductSlider({ data }) {
+export default function ProductSlider({ data, featured, related }) {
   const [swiperInstance, setSwiperInstance] = useState(null);
 
   return (
-    <div className="w-[90%] mx-auto mt-14">
+    <div className="mt-14">
       {/* heading and controls */}
       <div className="flex justify-between items-center mb-10">
         <div className="texts">
           <h1
             className={`text-[#7E53D4] ${manrope.className} text-[19px] font-normal`}
           >
-            FEATURED PRODUCT
+            {featured ? "FEATURED PRODUCT" : ""}
           </h1>
           <h4 className={`text-[28px] ${manrope.className} font-bold`}>
-            New Arrivals
+            {related ? "Related Products" : "New Arrivals"}
           </h4>
         </div>
         {/* controls */}
@@ -60,7 +60,7 @@ export default function ProductSlider({ data }) {
         // centeredSlides={true}
         centeredSlidesBounds={true}
         // slidesPerView={"auto"}
-        style={{ background: "#FFFFFF" }}
+        // style={{ background: "#FFFFFF" }}
       >
         {data?.map((item) => (
           <SwiperSlide
@@ -68,12 +68,12 @@ export default function ProductSlider({ data }) {
             style={{
               display: "flex",
               justifyContent: "none",
-              background: "#FFFFFF",
+              // background: "#FFFFFF",
             }}
             className="hover:cursor-pointer bg-[#F4F8FF]"
           >
             <Link href={`product/${item?.id}`}>
-              <div className="w-[286px] h-[400px] mt-[10px] ml-[10px]">
+              <div className="w-[286px]sm:w-[300px] h-[400px] mt-[10px] ml-[10px] bg-[#F4F8FF] sm:bg-white sm:p-2 rounded-[16px]">
                 {/* image */}
                 <div className="image w-[286px] h-[287px] overflow-hidden relative bg-[#F6F5FD] rounded-[8px]">
                   <Image src={item?.image} objectFit="cover" layout="fill" />
