@@ -55,7 +55,7 @@ export default function SingleProduct({ item }) {
         </div>
       </div>
       <div className="cart-button">
-        <AddToCartButton />
+        <AddToCartButton item={item} />
       </div>
     </div>
   );

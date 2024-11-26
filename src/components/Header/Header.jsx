@@ -9,7 +9,7 @@ import React from "react";
 export default function Header() {
   const pathName = usePathname();
   const { cartCount } = useCart();
-  console.log(cartCount);
+  // console.log(cartCount);
   return (
     <header className="flex justify-between px-5 sm:px-0 sm:justify-evenly items-center py-5 bg-[#F5F3FF] w-[100%]">
       {/* logo */}

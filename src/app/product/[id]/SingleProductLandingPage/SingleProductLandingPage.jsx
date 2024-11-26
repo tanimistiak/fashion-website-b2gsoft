@@ -10,11 +10,13 @@ import ProductSlider from "@/components/Homepage/FeaturedProducts/ProductSlider"
 import SeeMoreButton from "@/components/Homepage/SeeMoreButton/SeeMoreButton";
 import { ShoppingBasket01Icon } from "hugeicons-react";
 import { manrope } from "@/utils/font";
+import { useCart } from "@/context/CartContext";
 
 export default function SingleProductLandingPage() {
   const { id } = useParams();
   const { data } = useFetchData("/data.json");
   const [product, setProduct] = useState();
+  const { cartCount } = useCart();
   useEffect(() => {
     const foundProduct = data?.find((item) => item.id == id);
     setProduct(foundProduct);
@@ -42,7 +44,7 @@ export default function SingleProductLandingPage() {
       >
         <ShoppingBasket01Icon size={32} color="#F6F5FD" />
         <p>Your bag</p>
-        <p>0</p>
+        <p>{cartCount}</p>
       </div>
     </div>
   );

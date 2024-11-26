@@ -11,7 +11,7 @@ export const saveCart = (cart) => {
 
 export const addItemToCart = (item) => {
   const cart = getCart();
-  const existingItem = cart.find((cartItem) => cartItem.id === item.id);
+  const existingItem = cart.find((cartItem) => cartItem.name === item.name);
 
   if (existingItem) {
     // Update quantity if the item already exists
@@ -22,14 +22,4 @@ export const addItemToCart = (item) => {
 
   saveCart(cart);
   return cart;
-};
-
-export const removeItemFromCart = (id) => {
-  const cart = getCart().filter((item) => item.id !== id);
-  saveCart(cart);
-  return cart;
-};
-
-export const clearCart = () => {
-  localStorage.removeItem(CART_KEY);
 };

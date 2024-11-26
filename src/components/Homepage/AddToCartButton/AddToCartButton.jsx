@@ -3,11 +3,12 @@ import { manrope } from "@/utils/font";
 import React from "react";
 
 export default function AddToCartButton({ item }) {
+  console.log(item);
   const { addItem } = useCart();
 
   const handleAddToCart = () => {
     console.log(item);
-    addItem({ id: item.id, name: item.name, quantity: 1 });
+    addItem({ id: item?.id, name: item?.name, quantity: 1 });
   };
   return (
     <div
