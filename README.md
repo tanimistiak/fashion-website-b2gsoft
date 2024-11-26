@@ -22,7 +22,7 @@ This project is a pixel-perfect implementation of a responsive **E-commerce Land
 
 Make sure you have the following installed before getting started:
 
-- **Node.js** (v14 or later)
+- **Node.js** (v18 or later)
 - **npm** or **yarn**
 
 ---
@@ -77,10 +77,11 @@ Make sure you have the following installed before getting started:
 
 ```plaintext
 ├── components/
-│   ├── Header.js            # Navigation header
-│   ├── Footer.js            # Footer component
-│   ├── ProductCard.js       # Reusable product card component
-│   └── Slider.js            # Swiper.js slider
+│   ├── Header.jsx            # Navigation header
+│   ├── Footer.jsx            # Footer component
+│   ├── ProductSlider.jsx     # Reusable product card component
+│   └── Slider.jsx            # Swiper.js slider
+│   └── SingleProduct.jsx     # Product card
 ├── pages/
 │   ├── index.js             # Landing page
 │   └── product/
