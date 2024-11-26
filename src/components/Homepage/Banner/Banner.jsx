@@ -8,7 +8,7 @@ import ShopNowButton from "../ShopNowButton/ShopNowButton";
 
 export default function Banner() {
   return (
-    <section className="m-0">
+    <section>
       <div className="h-[350px] sm:h-[70vh] w-[100%] bg-hero bg-cover bg-no-repeat flex justify-center items-center bg-center">
         {/* hero text */}
         <div className="text text-center">

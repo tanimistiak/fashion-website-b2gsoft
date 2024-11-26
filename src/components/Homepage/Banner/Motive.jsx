@@ -7,7 +7,7 @@ import { manrope } from "@/utils/font";
 
 export default function Motive() {
   return (
-    <section className="w-[100%] h-[270px] sm:h-[82px] bg-motiveMobile sm:bg-motive bg-cover bg-no-repeat flex flex-col sm:flex-row sm:justify-center sm:items-center sm:mt-[-8px]  sm:gap-[80px] p-[25px] sm:p-0 gap-[16px] mt-[-15px]">
+    <section className="w-[100%] h-[270px] lg:h-[82px] bg-motiveMobile lg:bg-motive bg-cover bg-no-repeat flex flex-col  lg:flex-row lg:justify-center lg:items-center lg:mt-[-8px]  lg:gap-[80px] px-[20px] lg:p-0  gap-[16px] py-[8%] sm:mt-[-2.5%] md:mt-[-2%] md:py-[3.5%] sm:py-[4%] mt-[-3.5%]">
       {/* free shipping */}
       <div className="free-shipping flex items-start gap-[16px]">
         <Image src={truck} height={32} width={32} alt="truck" />
