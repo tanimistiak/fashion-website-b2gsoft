@@ -31,7 +31,7 @@ export default function ProductSlider({ data, featured, related }) {
         </div>
       </div>
       <Swiper
-        spaceBetween={24} // Space between slides
+        spaceBetween={15} // Space between slides
         slidesPerView={"auto"}
         onSwiper={setSwiperInstance}
         breakpoints={{

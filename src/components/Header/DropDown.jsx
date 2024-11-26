@@ -8,7 +8,7 @@ export default function DropDown({ dropDown }) {
   const pathName = usePathname();
   return (
     <div
-      className="w-[100%] h-[100px] absolute bg-[white] top-[-100%] flex justify-center items-center"
+      className="w-[100%] h-[100px] absolute bg-[white] top-[-100%] flex justify-center items-center z-10"
       style={{
         top: dropDown && "80px",
         transition: "all",
