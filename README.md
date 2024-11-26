@@ -1,36 +1,148 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# E-commerce Landing & Details Page
 
-## Getting Started
+This project is a pixel-perfect implementation of a responsive **E-commerce Landing Page** and **Product Details Page** using **Next.js** and **Tailwind CSS**, based on a Figma design.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Features
+
+- **Responsive Design**: Optimized for both desktop (1440px) and mobile (360px).
+- **Landing Page**: Displays products, header, footer, banners, and categories.
+- **Product Details Page**: Includes product images, price, description, reviews, size and color selection, image gallery, "Add to Cart" button, and recommendations.
+- **Functionalities**:
+  - Hamburger menu for mobile navigation.
+  - Color and size selection for products.
+  - Image sliders using **Swiper.js**.
+  - Review and ratings tab.
+- **Reusable Components**: Modular structure for scalability and maintainability.
+
+---
+
+## 📋 Requirements
+
+Make sure you have the following installed before getting started:
+
+- **Node.js** (v14 or later)
+- **npm** or **yarn**
+
+---
+
+## 🛠️ Installation
+
+1. Clone this repository:
+
+   ```bash
+   git clone https://github.com/your-username/ecommerce-landing-details-page.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd ecommerce-landing-details-page
+   ```
+
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+   or
+   ```bash
+   yarn install
+   ```
+
+---
+
+## 🚀 Running the Project
+
+1. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+   or
+
+   ```bash
+   yarn dev
+   ```
+
+2. Open your browser and visit:
+   ```
+   http://localhost:3000
+   ```
+
+---
+
+## 🏗️ Project Structure
+
+```plaintext
+├── components/
+│   ├── Header.js            # Navigation header
+│   ├── Footer.js            # Footer component
+│   ├── ProductCard.js       # Reusable product card component
+│   └── Slider.js            # Swiper.js slider
+├── pages/
+│   ├── index.js             # Landing page
+│   └── product/
+│       └── [id].js          # Product details page
+├── public/                  # Static assets (images, icons, etc.)
+├── styles/                  # Global and Tailwind CSS styles
+├── tailwind.config.js       # Tailwind CSS configuration
+└── next.config.js           # Next.js configuration
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🌟 Key Functionalities
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### **Landing Page**
 
-## Learn More
+- Features sections for banners, categories, and product cards.
+- Responsive and user-friendly layout.
 
-To learn more about Next.js, take a look at the following resources:
+### **Details Page**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Includes an image gallery with sliders.
+- Interactive size and color selection.
+- Reviews section with toggle functionality.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🔧 Technologies Used
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Next.js**: Framework for server-rendered React applications.
+- **Tailwind CSS**: For responsive and utility-first styling.
+- **Swiper.js**: For interactive sliders and carousels.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🌈 Scope for Improvement
+
+- Add animations for enhanced user experience.
+- Optimize SEO with additional meta tags and accessibility features.
+- Automate cross-browser testing for better compatibility.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License. Feel free to use it as a starting point for your own projects.
+
+---
+
+## 🤝 Acknowledgements
+
+- [Figma Design](https://www.figma.com/design/IeMowxQBeykcHMYKhWwa6a/fashion-Website-UI?node-id=0-1&t=Fc3qfVtzuEs11xfS-1)
+
+---
+
+## 👨‍💻 Author
+
+**Tanim Istiak**
+
+- [LinkedIn](https://www.linkedin.com/in/tanim-istiak/)
+- [GitHub](https://github.com/your-username/)
+
+```
+
+```
