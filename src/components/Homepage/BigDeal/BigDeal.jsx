@@ -10,8 +10,7 @@ import ProductSliderWithRating from "./ProductSliderWithRating";
 export default function BigDeal() {
   const { data } = useFetchData("/bigDealData.json");
   const [swiperInstance, setSwiperInstance] = useState(null);
-  // console.log(data);
-  console.log(data);
+ 
   return (
     <section className="w-[90%] mx-auto ">
       <div className="header justify-between flex items-center mb-5">

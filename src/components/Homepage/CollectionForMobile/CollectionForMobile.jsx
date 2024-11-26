@@ -24,7 +24,7 @@ export default function CollectionForMobile() {
   return (
     <section>
       {collection?.map((item, index) => (
-        <div className="flex justify-center mb-20">
+        <div key={item} className="flex justify-center mb-20">
           <div>
             <div
               className={`image w-[326.74px] h-[302.82px] bg-[#EEECFB] relative flex justify-center`}

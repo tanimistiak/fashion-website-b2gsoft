@@ -7,7 +7,7 @@ import SeeMoreButton from "../SeeMoreButton/SeeMoreButton";
 
 export default function FeaturedProducts() {
   const { data, loading, error } = useFetchData("/data.json");
-  console.log(data);
+
   return (
     <div>
       {loading && <p>Loading...</p>}

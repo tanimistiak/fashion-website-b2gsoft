@@ -2,7 +2,7 @@ import { manrope } from "@/utils/font";
 import React from "react";
 
 export default function ReviewsProgressBar({ bar }) {
-  console.log(bar);
+ 
   const { valueOne, valueTwo, width, progress } = bar;
   return (
     <div className="my-2 flex items-center gap-2">

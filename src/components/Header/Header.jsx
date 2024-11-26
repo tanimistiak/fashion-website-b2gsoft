@@ -12,7 +12,7 @@ export default function Header() {
   const pathName = usePathname();
   const { cartCount } = useCart();
   const [dropDown, setDropDown] = useState(false);
-  // console.log(cartCount);
+  
   return (
     <div>
       <header className="flex justify-between px-5 sm:px-0 sm:justify-evenly items-center py-5 bg-[#F5F3FF] w-[100%]">

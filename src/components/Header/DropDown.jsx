@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import React from "react";
 
 export default function DropDown({ dropDown }) {
-  //   console.log(dropDown);
+ 
   const pathName = usePathname();
   return (
     <div
