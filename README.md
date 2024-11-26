@@ -32,13 +32,13 @@ Make sure you have the following installed before getting started:
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/your-username/ecommerce-landing-details-page.git
+   git clone https://github.com/tanimistiak/fashion-website-b2gsoft.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd ecommerce-landing-details-page
+   cd fashion-website-b2gsoft
    ```
 
 3. Install dependencies:
