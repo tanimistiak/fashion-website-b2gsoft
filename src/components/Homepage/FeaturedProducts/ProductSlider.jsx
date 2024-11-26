@@ -72,9 +72,9 @@ export default function ProductSlider({ data, featured, related }) {
             }}
             className="hover:cursor-pointer bg-[#F4F8FF]"
           >
-            <Link href={`product/${item?.id}`}>
-              <div className="w-[286px]sm:w-[300px] h-[400px] mt-[10px] ml-[10px] bg-[#F4F8FF] sm:bg-white sm:p-2 rounded-[16px]">
-                {/* image */}
+            <div className="w-[286px]sm:w-[300px] h-[400px] mt-[10px] ml-[10px] bg-[#F4F8FF] sm:bg-white sm:p-2 rounded-[16px]">
+              {/* image */}
+              <Link href={`product/${item?.id}`}>
                 <div className="image w-[286px] h-[287px] overflow-hidden relative bg-[#F6F5FD] rounded-[8px]">
                   <Image src={item?.image} objectFit="cover" layout="fill" />
                 </div>
@@ -91,10 +91,10 @@ export default function ProductSlider({ data, featured, related }) {
                     BDT {item?.price}
                   </div>
                 </div>
-                {/* cart */}
-                <AddToCartButton />
-              </div>
-            </Link>
+              </Link>
+              {/* cart */}
+              <AddToCartButton item={item} />
+            </div>
           </SwiperSlide>
         ))}
         {/* Add more SwiperSlide components as needed */}

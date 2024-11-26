@@ -1,4 +1,6 @@
 "use client";
+import { useCart } from "@/context/CartContext";
+import { nunito } from "@/utils/font";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -6,7 +8,8 @@ import React from "react";
 
 export default function Header() {
   const pathName = usePathname();
-  console.log(pathName);
+  const { cartCount } = useCart();
+  console.log(cartCount);
   return (
     <header className="flex justify-between px-5 sm:px-0 sm:justify-evenly items-center py-5 bg-[#F5F3FF] w-[100%]">
       {/* logo */}
@@ -36,7 +39,7 @@ export default function Header() {
           </Link>
           <Link
             href="/product"
-            className={`${pathName.includes('product') && "text-[#581FC1]"}`}
+            className={`${pathName.includes("product") && "text-[#581FC1]"}`}
           >
             Shop
           </Link>
@@ -74,7 +77,14 @@ export default function Header() {
         </div>
         {/* cart */}
         <div>
-          <Image src="/images/cart.png" alt="cart" height={24} width={24} />
+          <div className="h-[24px] w-[30px] relative">
+            <Image src="/images/cart.png" alt="cart" height={24} width={24} />
+            <div
+              className={`w-[16px] h-[16px] bg-[#1E1E1E] flex justify-center items-center ${nunito.className} text-[12px] text-[#F4F8FF] rounded-[8px] absolute top-0 right-0`}
+            >
+              {cartCount}
+            </div>
+          </div>
         </div>
         {/* account */}
         <div>

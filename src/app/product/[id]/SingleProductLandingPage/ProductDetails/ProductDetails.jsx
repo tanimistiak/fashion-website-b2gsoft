@@ -74,7 +74,7 @@ export default function ProductDetails({ item }) {
       {/* button */}
       <div className="flex gap-5 my-5 sm:flex-row flex-col">
         <BuyNowButton />
-        <AddToCartButton />
+        <AddToCartButton item={item} />
       </div>
     </div>
   );

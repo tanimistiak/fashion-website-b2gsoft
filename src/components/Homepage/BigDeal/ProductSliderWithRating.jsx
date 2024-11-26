@@ -7,8 +7,11 @@ import { ArrowLeft02Icon, ArrowRight02Icon } from "hugeicons-react";
 
 import SwiperNavigation from "../SwiperNavigation/SwiperNavigation";
 import AddToCartButton from "../AddToCartButton/AddToCartButton";
-export default function ProductSliderWithRating({ data, setSwiperInstance, swiperInstance }) {
-  
+export default function ProductSliderWithRating({
+  data,
+  setSwiperInstance,
+  swiperInstance,
+}) {
   const rating = [1, 2, 3];
   const noRating = [1, 2];
   return (
@@ -89,7 +92,7 @@ export default function ProductSliderWithRating({ data, setSwiperInstance, swipe
                 </div>
               </div>
               {/* cart */}
-              <AddToCartButton />
+              <AddToCartButton item={item} />
             </div>
           </SwiperSlide>
         ))}
