@@ -142,7 +142,7 @@ This project is licensed under the MIT License. Feel free to use it as a startin
 **Tanim Istiak**
 
 - [LinkedIn](https://www.linkedin.com/in/tanim-istiak/)
-- [GitHub](https://github.com/your-username/)
+- [GitHub](https://github.com/tanimistiak/)
 
 ```
 
