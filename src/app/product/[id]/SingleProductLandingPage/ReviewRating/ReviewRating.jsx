@@ -26,8 +26,9 @@ export default function ReviewRating() {
       <div className="tab flex gap-5 sm:gap-20">
         {tabs?.map((tab) => (
           <div
+            key={tab}
             onClick={() => setSelected(tab)}
-            className={`${manrope.className} text-[19px] font-semibold ${
+            className={`${manrope.className} sm:text-[19px] font-semibold ${
               selected === tab
                 ? "text-[#7E53D4]"
                 : "text-[#747474] hover:cursor-pointer"
@@ -52,7 +53,7 @@ export default function ReviewRating() {
             {/* cameron */}
             <div>
               {reviews.map((review, index) => (
-                <div>
+                <div key={index}>
                   <div className="flex gap-2 my-5">
                     <div>
                       <img src={review?.image} alt="" />
