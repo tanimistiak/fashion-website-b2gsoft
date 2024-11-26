@@ -5,7 +5,7 @@ import React from "react";
 export default function ContactGroup() {
   return (
     <div
-      className={`${manrope.className} flex justify-between my-5 sm:gap-[147px] sm:flex-row flex-col gap-5`}
+      className={`${manrope.className} flex justify-between my-5 md:gap-[100px] sm:flex-row flex-col gap-5`}
     >
       <div className="contact-us">
         <h1 className="font-bold text-white sm:mb-5 mb-2">Contact Us</h1>

@@ -8,10 +8,10 @@ export default function Footer() {
     <footer className="bg-[#1D1D1D] w-[100%] sm:h-[491px]">
       {/* before copyright */}
       <section className="w-[90%] mx-auto flex flex-col justify-center h-[90%] py-5">
-        <div className="logo-newsletter flex w-[100%] justify-between sm:flex-row flex-col">
+        <div className="logo-newsletter flex w-[100%] justify-between sm:flex-col flex-col md:flex-col lg:flex-row">
           {/* logo text */}
-          <div className="logo-text w-[100%] sm:w-[30%]">
-            <div className="logo sm:w-[197px] sm:h-[49px] w-[96.29px] h-[24px] relative sm:my-0 my-5">
+          <div className="logo-text w-[100%] lg:w-[30%]">
+            <div className="logo lg:w-[197px] lg:h-[49px] w-[96.29px] h-[24px] md:w-[96.29px] md:h-[24px] relative sm:my-0 my-5">
               <Image src="/images/logof.png" objectFit="cover" layout="fill" />
             </div>
             <div className="text">
@@ -41,7 +41,7 @@ export default function Footer() {
                 type="text"
                 name=""
                 id=""
-                className={`sm:w-[435px] w-[220px] sm:h-[53px] h-[40px] rounded-tl-[8px] rounded-bl-[8px] p-[16px] placeholder:text-[16px] placeholder:text-[#1D1D1D]`}
+                className={`lg:w-[435px] w-[220px] sm:h-[53px] h-[40px] rounded-tl-[8px] rounded-bl-[8px] p-[16px] placeholder:text-[16px] placeholder:text-[#1D1D1D]`}
                 placeholder="Your email address"
               />
               <button

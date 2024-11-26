@@ -33,12 +33,12 @@ export default function BigDeal() {
       </div>
       {/* products */}
       <div className="products hidden sm:flex flex-col gap-[24px]">
-        <div className="products sm:grid sm:grid-cols-4 gap-[24px]">
+        <div className="products sm:grid sm:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-[24px]">
           {data?.map((item) => (
             <SingleProduct item={item} key={item?.id} />
           ))}
         </div>
-        <div className="products sm:grid sm:grid-cols-4 gap-[24px]">
+        <div className="products sm:grid sm:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-[24px]">
           {data?.map((item) => (
             <SingleProduct item={item} key={item?.id} />
           ))}

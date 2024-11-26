@@ -61,7 +61,7 @@ export default function ProductDetails({ item }) {
         <Dashedborder />
       </div>
 
-      <div className="flex gap-56 items-center">
+      <div className="flex gap-[20px] xl:gap-56 items-center">
         <AvailableSize />
         <AvailableColor />
       </div>

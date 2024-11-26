@@ -38,8 +38,8 @@ export default function ReviewRating() {
         ))}
       </div>
       {selected === "Review & Rating" && (
-        <div className="py-14 flex gap-5 sm:flex-row flex-col flex-col-reverse">
-          <div className="w-[100%] sm:w-[65%]">
+        <div className="py-14 flex gap-5  flex-col lg:flex-row flex-col-reverse">
+          <div className="w-[100%] lg:w-[65%]">
             {/* reviews */}
             <div className="reviews w-[121px] h-[40px] border-[#7E53D4] border-[1px] flex justify-center items-center rounded-[8px]">
               <div
@@ -117,7 +117,7 @@ export default function ReviewRating() {
               ))}
             </div>
           </div>
-          <div className="w-[100%] sm:w-[35%]">
+          <div className="w-[100%] lg:w-[35%]">
             <ReviewProgress />
           </div>
         </div>

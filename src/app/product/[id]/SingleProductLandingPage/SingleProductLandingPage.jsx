@@ -20,11 +20,11 @@ export default function SingleProductLandingPage() {
 
   return (
     <div className="w-[90%] mx-auto">
-      <div className="first-section flex gap-5 py-5 sm:flex-row flex-col">
-        <div className="w-[100%] sm:w-[50%] gallery-slider">
+      <div className="first-section flex gap-5 py-5 lg:flex-row sm:flex-col flex-col">
+        <div className="w-[100%] lg:w-[50%] gallery-slider">
           <Gallery />
         </div>
-        <div className="w-[100%] sm:w-[50%]">
+        <div className="w-[100%] lg:w-[50%]">
           <ProductDetails item={product} />
         </div>
       </div>

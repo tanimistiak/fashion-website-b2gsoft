@@ -16,7 +16,7 @@ export default function AvailableColor() {
   useEffect(() => setSelectedName(colors[0]), []);
 
   return (
-    <div className="hidden sm:block">
+    <div className="hidden lg:block">
       <p className={`${manrope.className} text-[19px] font-semibold`}>
         Available Color
       </p>
